@@ -1,5 +1,5 @@
 
-Resurrection OS Nougat Source 2016
+#PixelDroid based on CyanogenMod with Resurrection Remix Modifications#
 ===================
 
 
@@ -7,14 +7,14 @@ Resurrection OS Nougat Source 2016
 
 Getting Started
 ---------------
-To get started with building from Resurrection Remix sources, you'll need to get
+To get started with Android/PixelDroid, you'll need to get
 familiar with [Git and Repo](http://source.android.com/source/version-control.html).
 
-How To Build Resurrection Remix ROM for your device - Tutorial
+How To Build PixelDroid ROM for your device - Tutorial
 --------
-### New Way to set up and build Resurrection Remix.
+New Way to set up and build PixelDroid Rom.
 
-##### refer to github.com/akhilnarang/scripts to setup build env
+refer to github.com/akhilnarang/scripts to setup build env
 
 Once done, the source code should be already set up and you can head on to build RR by using the build script in the root of source code
  
@@ -23,8 +23,6 @@ so simply copy and paste this in a terminal window:
      $ bash build.sh
 
 ---
-
-### Old Way to set up and build Resurrection Remix.
 
 ### Build Environment
 
@@ -74,62 +72,87 @@ Alright, so now we’re getting there. I have outlined the basics of what we’r
 
       $ chmod a+x ~/bin/repo
 
-##### Creating directory for where the RR repo will be stored and synced
+##### Creating directory for where the PF_RR repo will be stored and synced
 
-      $ mkdir ~/RR
-      $ cd ~/RR
+      $ mkdir ~/PF_RR
+      $ cd ~/PF_RR
 
 ##### Initializing the RR repo and downloading the manifest
 
-      $  repo init -u https://github.com/ResurrectionRemix/platform_manifest.git -b nougat
+      $  repo init -u https://github.com/pixelfreak2005/platform_manifest.git -b nougat-PF
 
 ##### Syncing the source
 [Hint: This might take a long time as the source is ~20GB]
 
       $  repo sync -f --force-sync --no-clone-bundle
 
-###Building the Resurrection Remix ROM
+###Building the PixelDroid ROM
 - Preparing Required Binaries and Device Drivers
 - Setting Up CCache (Optional)
 - Building Resurrection Remix
 
 Congratulations on the succesfull build initialization! Now, we shall go ahead and prepare to build for your device!
 
-##### Preparing Resurrection Remix ROM for devices
+##### Preparing PixelDroid ROM for devices
 - Follow the AOSP Porting Instructions stated here to prepare the proprietary files for building for your device: (http://xda-university.com/as-a-developer/porting-aosp-roms-using-source-code)
 
-##### Setting Up CCache
-- CCache is a method of utilizing a specified storage space to speed up building. It can be referred to as the same caching your android device does to speed up application and system boot times. In this case, CCache will help build Resurrection Remix faster than standard build times (Able to cut-down 50% of time taken to build).
-- To set up CCache, follow the following:
 
+##### maven compile stop fix
+    $ echo QUIT | openssl s_client -showcerts -connect maven.cyanogenmod.org:443 > ssl.cyanogenmod.org.crt
+    $ mv ssl.cyanogenmod.org.crt /usr/local/share/ca-certificates/
+    $ update-ca-certificates --fresh
+    
+##### Java GC compile stop fix and more tweaks for compiling
+    $ export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx8g"
+    $ ./prebuilts/sdk/tools/jack-admin kill-server
+    $./prebuilts/sdk/tools/jack-admin start-server
+    
+##### or write in bashrc file
+    $ sudo nautilus -> serach the .bashrc file and open with gedit and save it
+    
+    export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+    export PATH=$JAVA_HOME:$PATH
+    alias sudo='sudo env PATH=$PATH'
 
-        $ echo "export USE_CCACHE=1" >> ~/.bashrc
-      
-        $ ~/RR/prebuilts/misc/linux-x86/ccache/ccache -M 50G
+    export USE_CCACHE=1
+    export CCACHE_DIR=/home/pixelfreak/.ccache
+    alias sudo='sudo env PATH=$PATH'
 
-     -M 50G
+    export _JAVA_OPTIONS=-Xmx4096m
+    export JACK_SERVER_VM_ARGUMENTS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx8g"
+     
+    
+##### To build PixelDroid ROM
+    $ cd PF_RR
+    $ prebuilts/misc/linux-x86/ccache/ccache -M 100G
+    $ . build/envsetup.sh && brunch cm_r7plus-userdebug && mka LANG=C -j4 bacon
+    
 The number before the letter G at the end specifies the amount of space CCache can use in your storage unit. As such, ensure that not too much of space is specified as this might result in unexpected errors although, the more storage you have, its recommended to have more CCache as it will increase the build times. Most efficient build systems are able to utilize CCache to about 120G or more.
-
-##### To build Resurrection Remix ROM
-
-      $ cd ~/RR
-      $ . build/envsetup.sh && brunch <device>
-
-##### Obtaining the zip created from the build process
-To get the zip file that has been built, navigate to the following directory and find for the zip file:
-
-      $ cd ~/RR/out/target/product/<devicename>/
 
 If you found it, then congratulations! If you didn't, try retrying the build process but before doing so, ensure you do the following to make sure your next build is clean;
 
-      $ cd ~/RR
-      $ make clean
+      $ cd ~/PF_RR
+      $ make clean && make clobber && ccache -C
       $ repo sync --force-sync
 
 After doing so, redo everything stated from the Building Section.
 
-##### For those who successfully built Resurrection Remix
-
+##### For those who successfully built PixelDroid
 Well, Congratulations on your victory! Now, you have a .zip file that flashable to your device! Share it to the internet as you wish but be sure to contribute back and also give credits to the Resurrection Remix Team and its contributors!Also keep in mind that if an official build exists for a device, no unofficial builds should be released publicly. Do come and build Resurrection Remix another time as source code is routinely being improved upon. If you wish to contibute, feel free to make a pull request to the Ressurection Remix Team! See you again builder!Note:If you decide to create a thread on xda, please limit the thread to only one per device.more than one thread will not be allowed per device as it creates confusion amongst users and makes it hard for us to track bug reports.If you have unofficial builds, post them up on g+ so users can use and report issues in the post itself.
+
+#install Rom on oppo R7Plus#
+
+    - install fastboot and the phone drivers on the PC
+    - hold  volume up and down and power for start fastboot
+    - search your device in terminal/cmd with "fastboot devices"
+    - if you see "<waiting for device>" , fastboot is not configured properly on your machine.
+    - you must start this command in terminal/cmd "fastboot oem unlock"
+    - command "fastboot devices"
+    - command "fastboot boot your_recovery_image.img"
+    - the phone should reboot in the twrp
+    - copy the rom .zip file and gapps .zip file to the SD Card
+    - go to install -> from sd card -> "rom".zip and second "gapps".zip
+    - after install reboot to system and HAVE FUN
+
 
 
