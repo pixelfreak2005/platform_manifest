@@ -24,7 +24,7 @@
 
  <remote  name="pixel"
           fetch="https://github.com/Pixelfreak2005"
-	  revision="nougat" />
+	  revision="nougat-PF" />
 
  <remote name="tm"
           fetch="https://github.com/TheMuppets"
