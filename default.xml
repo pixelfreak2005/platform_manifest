@@ -27,7 +27,7 @@
 	  revision="nougat-PF" />
 
   <remote name="bucket"
-	  fetch="https://bitbucket.org"
+	  fetch="https://bitbucket.org/UBERTC"
 	  revision="master" />
 
  <remote name="tm"
