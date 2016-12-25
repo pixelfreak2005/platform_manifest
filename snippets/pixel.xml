@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest> 
-  <project path="vendor/oppo" name="proprietary_vendor_oppo" remote="tm" />
-  <project path="vendor/qcom/binaries" name="proprietary_vendor_qcom_binaries" remote="tm" />
+  <project path="vendor/oppo" name="proprietary_vendor_oppo" revision="cm-14.1" remote="tm" />
+  <project path="vendor/qcom/binaries" name="proprietary_vendor_qcom_binaries" revision="cm-14.1" remote="tm" />
 
   <project path="external/stlport" name="android_external_stlport" revision="cm-14.1" remote="pixel" />
   <project path="external/sony/boringssl-compat" name="android_external_sony_boringssl-compat" revision="cm-14.1" remote="pixel" />
