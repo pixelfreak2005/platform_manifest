@@ -22,6 +22,14 @@
 	   fetch="https://github.com/ResurrectionRemix"
 	   revision="nougat" />
 
+  <remote  name="pixel"
+          fetch="https://github.com/Pixelfreak2005"
+	  revision="nougat" />
+
+ <remote name="tm"
+          fetch="https://github.com/TheMuppets"
+	  revision="cm-14.1" />
+
   <!-- AOSP Projects -->
 
     <project path="build" name="android_build" remote="rr" >
