@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest> 
-  <remote  name="pixel"
-          fetch="https://github.com/Pixelfreak2005"
-	  revision="nougat" />
-
- <remote name="tm"
-          fetch="https://github.com/TheMuppets"
-	  revision="cm-14.1" />
-
-
   <project path="vendor/oppo" name="proprietary_vendor_oppo" remote="tm" />
   <project path="vendor/qcom/binaries" name="proprietary_vendor_qcom_binaries" remote="tm" />
 
