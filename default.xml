@@ -671,6 +671,6 @@
   <project path="vendor/qcom/binaries" name="proprietary_vendor_qcom_binaries" revision="cm-14.1" remote="tm" />
 
   <!-- toolchains-->
-  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="arm-eabi-4.8" remote="bucket" />
-  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="arm-linux-androideabi-4.9" remote="bucket" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="Toolchain" revision="architoolchain-5.2-arm-linux-gnueabihf" remote="pixel" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" name="Toolchain" revision="uber-4.9-arm-linux-androideabi" remote="pixel" />
 </manifest>
