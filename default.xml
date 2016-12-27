@@ -662,7 +662,7 @@
   <project path="packages/apps/FloatingActionButton" name="FloatingActionButton" revision="n7.1" remote="pixel"/>
   <project path="packages/apps/KernelAdiutor" name="KernelAdiutor" revision="n7.1" remote="pixel"/>
   <project path="packages/apps/PixelDroidOTA" name="packages_apps_PixelDroidOTA" revision="nougat-PF" remote="pixel" />
-  <project path="packages/apps/resources/devicesettings" name="android_packages_resources_devicesettings" revision="cm-14.1" remote="pixel" />
+  <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" revision="cm-14.1" remote="pixel" />
 
   <!-- vendor-->
   <project path="vendor/cm" name="android_vendor_resurrection" remote="pixel" />
