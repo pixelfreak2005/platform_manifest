@@ -6,7 +6,7 @@
   <project path="external/stlport" name="android_external_stlport" revision="cm-14.1" remote="pixel" />
   <project path="external/sony/boringssl-compat" name="android_external_sony_boringssl-compat" revision="cm-14.1" remote="pixel" />
 
-  <project path="device/oppo/common" name="android_device_oppo_common" revision="nougat" remote="pixel" />
+  <project path="device/oppo/common" name="android_device_oppo_common" remote="pixel" />
   <project path="device/oppo/r7plus" name="android_device_oppo_r7plus" revision="cm-14.1" remote="pixel" />
   <project path="device/oppo/msm8939-common" name="android_device_oppo_msm8939-common" revision="cm-14.1" remote="pixel" />
 
