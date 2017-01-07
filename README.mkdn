@@ -125,7 +125,7 @@ Congratulations on the succesfull build initialization! Now, we shall go ahead a
 ##### To build PixelDroid ROM
     $ cd PF_RR
     $ prebuilts/misc/linux-x86/ccache/ccache -M 100G
-    $ . build/envsetup.sh && brunch cm_r7plus-userdebug && mka LANG=C -j4 bacon
+    $ . build/envsetup.sh && brunch lineage_r7plus-userdebug && mka LANG=C -j4 bacon
     
 The number before the letter G at the end specifies the amount of space CCache can use in your storage unit. As such, ensure that not too much of space is specified as this might result in unexpected errors although, the more storage you have, its recommended to have more CCache as it will increase the build times. Most efficient build systems are able to utilize CCache to about 120G or more.
 
