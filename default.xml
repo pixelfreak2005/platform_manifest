@@ -317,7 +317,6 @@
   <project path="frameworks/minikin" name="platform/frameworks/minikin" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="frameworks/ml" name="platform/frameworks/ml" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="frameworks/multidex" name="platform/frameworks/multidex" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
-  <project path="frameworks/native" name="LineageOS/android_frameworks_native" groups="pdk" />
   <project path="frameworks/opt/bitmap" name="platform/frameworks/opt/bitmap" groups="pdk-fs" remote="aosp" />
   <project path="frameworks/opt/bluetooth" name="platform/frameworks/opt/bluetooth" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
@@ -472,7 +471,6 @@
   <project path="system/connectivity/apmanager" name="platform/system/connectivity/apmanager" remote="aosp" />
   <project path="system/connectivity/dhcp_client" name="platform/system/connectivity/dhcp_client" remote="aosp" />
   <project path="system/connectivity/shill" name="platform/system/connectivity/shill" remote="aosp" />
-  <project path="system/core" name="LineageOS/android_system_core" groups="pdk" />
   <project path="system/extras" name="LineageOS/android_system_extras" groups="pdk" />
   <project path="system/firewalld" name="platform/system/firewalld" remote="aosp" />
   <project path="system/gatekeeper" name="platform/system/gatekeeper" groups="pdk" remote="aosp" />
@@ -635,7 +633,9 @@
   <project path="packages/apps/CMParts" name="android_packages_apps_CMParts" remote="rr"/>
   <project path="frameworks/av" name="frameworks_av" remote="rr" />
   <project path="vendor/cmsdk" name="cm_platform_sdk" remote="rr" />
-
+  <project path="frameworks/native" name="frameworks_native" remote="rr" />
+  <project path="system/core" name="system_core" remote="rr" />
+  <project name="omnirom/android_packages_apps_OmniStyle" path="packages/apps/OmniStyle" remote="github" revision="android-7.1" />
 
   <!-- PixelDroid -->
   <project path="android" name="platform_manifest" remote="pixel" />
