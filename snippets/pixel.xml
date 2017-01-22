@@ -9,6 +9,7 @@
   <project path="device/oppo/common" name="android_device_oppo_common" remote="pixel" />
   <project path="device/oppo/r7plus" name="android_device_oppo_r7plus" revision="cm-14.1" remote="pixel" />
   <project path="device/oppo/msm8939-common" name="android_device_oppo_msm8939-common" revision="cm-14.1" remote="pixel" />
+  <project path="device/qcom/common" name="android_device_qcom_common" revision="cm-14.1" remote="pixel" />
 
   <project path="kernel/oppo/msm8939" name="android_kernel_oppo_msm8939" revision="cm-14.1" remote="pixel" />
 
