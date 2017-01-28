@@ -633,7 +633,6 @@
   <project path="frameworks/av" name="frameworks_av" remote="rr" />
   <project path="external/skia" name="external_skia" remote="rr" />
   <project path="art" name="art" remote="rr" />
-  <project path="vendor/cmsdk" name="cm_platform_sdk" remote="rr" />
   <project path="frameworks/native" name="frameworks_native" remote="rr" />
   <project path="system/core" name="system_core" remote="rr" />
   <project name="omnirom/android_packages_apps_OmniStyle" path="packages/apps/OmniStyle" remote="github" revision="android-7.1" />
