@@ -13,6 +13,7 @@
 
   <project path="kernel/oppo/msm8939" name="android_kernel_oppo_msm8939" revision="cm-14.1" remote="pixel" />
 
+  <project path="packages/apps/Snap" name="android_packages_apps_Snap" revision="cm-14.1" remote="pixel"/>
   <project path="packages/apps/ResurrectionOTA" name="packages_apps_PixelDroidOTA" revision="nougat" remote="pixel" />
   <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" revision="cm-14.1" remote="pixel" />
 </manifest>
