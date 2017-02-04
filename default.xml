@@ -386,11 +386,8 @@
   <project path="packages/apps/CarrierConfig" name="LineageOS/android_packages_apps_CarrierConfig" groups="pdk-fs" />
   <project path="packages/apps/CellBroadcastReceiver" name="LineageOS/android_packages_apps_CellBroadcastReceiver" groups="pdk-fs" />
   <project path="packages/apps/CertInstaller" name="LineageOS/android_packages_apps_CertInstaller" groups="pdk-cw-fs,pdk-fs" />
-  <project path="packages/apps/Contacts" name="LineageOS/android_packages_apps_Contacts" groups="pdk-fs" />
-  <project path="packages/apps/ContactsCommon" name="LineageOS/android_packages_apps_ContactsCommon" groups="pdk-fs" />
   <project path="packages/apps/Email" name="LineageOS/android_packages_apps_Email" groups="pdk-fs" />
   <project path="packages/apps/EmergencyInfo" name="LineageOS/android_packages_apps_EmergencyInfo" />
-  <project path="packages/apps/ExactCalculator" name="LineageOS/android_packages_apps_ExactCalculator" groups="pdk-fs" />
   <project path="packages/apps/Gallery2" name="LineageOS/android_packages_apps_Gallery2" groups="pdk-fs" />
   <project path="packages/apps/HTMLViewer" name="LineageOS/android_packages_apps_HTMLViewer" groups="pdk-fs" />
   <project path="packages/apps/KeyChain" name="LineageOS/android_packages_apps_KeyChain" groups="pdk-fs" />
@@ -398,10 +395,8 @@
   <project path="packages/apps/Nfc" name="LineageOS/android_packages_apps_Nfc" groups="apps_nfc,pdk-fs" />
   <project path="packages/apps/OneTimeInitializer" name="platform/packages/apps/OneTimeInitializer" groups="pdk-fs" remote="aosp" />
   <project path="packages/apps/PackageInstaller" name="LineageOS/android_packages_apps_PackageInstaller" groups="pdk-fs" />
-  <project path="packages/apps/PhoneCommon" name="LineageOS/android_packages_apps_PhoneCommon" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/apps/Provision" name="platform/packages/apps/Provision" groups="pdk-fs" remote="aosp" />
   <project path="packages/apps/SafetyRegulatoryInfo" name="LineageOS/android_packages_apps_SafetyRegulatoryInfo" />
-  <project path="packages/apps/SoundRecorder" name="LineageOS/android_packages_apps_SoundRecorder" groups="pdk-fs" />
   <project path="packages/apps/Stk" name="LineageOS/android_packages_apps_Stk" groups="apps_stk,pdk-fs" />
   <project path="packages/apps/Tag" name="LineageOS/android_packages_apps_Tag" groups="pdk-fs" />
   <project path="packages/apps/Terminal" name="LineageOS/android_packages_apps_Terminal" groups="pdk-fs" />
@@ -510,7 +505,6 @@
   <project path="external/ffmpeg" name="LineageOS/android_external_ffmpeg" />
   <project path="external/fuse" name="LineageOS/android_external_fuse" />
   <project path="external/gello-build" name="LineageOS/android_external_gello_build" />
-  <project path="external/google" name="LineageOS/android_external_google" />
   <project path="external/htop" name="LineageOS/android_external_htop" />
   <project path="external/koush/ion" name="LineageOS/ion" />
   <project path="external/libncurses" name="LineageOS/android_external_libncurses" />
@@ -547,7 +541,7 @@
   <project path="packages/apps/FMRadio" name="LineageOS/android_packages_apps_FMRadio" />
   <project path="packages/apps/Gello" name="LineageOS/android_packages_apps_Gello" />
   <project path="packages/apps/Profiles" name="LineageOS/android_packages_apps_Profiles" />
-  <project path="packages/apps/Screencast" name="LineageOS/android_packages_apps_Screencast" />
+  <project path="packages/apps/Recorder" name="LineageOS/android_packages_apps_Recorder" />
   <project path="packages/apps/SetupWizard" name="LineageOS/android_packages_apps_SetupWizard" />
   <project path="packages/apps/ThemeChooser" name="LineageOS/android_packages_apps_ThemeChooser" />
   <project path="packages/apps/Trebuchet" name="LineageOS/android_packages_apps_Trebuchet" />
@@ -617,6 +611,10 @@
 
   <!-- ResurectionRamix -->
   <project path="vendor/cmsdk" name="cm_platform_sdk" remote="rr" />
+  <project path="packages/apps/Contacts" name="android_packages_apps_Contacts" remote="rr" />
+  <project path="packages/apps/ContactsCommon" name="android_packages_apps_ContactsCommon" remote="rr" />
+  <project path="packages/apps/ExactCalculator" name="android_packages_apps_ExactCalculator" remote="rr" />
+  <project path="packages/apps/PhoneCommon" name="android_packages_apps_PhoneCommon" remote="rr" />
   <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="rr" />
   <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="rr" />
   <project path="packages/apps/OmniSwitch" name="android_packages_apps_OmniSwitch" remote="rr" />
@@ -634,7 +632,9 @@
   <project path="art" name="art" remote="rr" />
   <project path="frameworks/native" name="frameworks_native" remote="rr" />
   <project path="system/core" name="system_core" remote="rr" />
+  <project path="external/google" name="android_external_google" remote="rr" />
   <project name="omnirom/android_packages_apps_OmniStyle" path="packages/apps/OmniStyle" remote="github" revision="android-7.1" />
+  <project name="TeamSubstratum/masquerade" path="packages/apps/masquerade" remote="github" revision="n" />
 
   <!-- PixelDroid -->
   <project path="android" name="platform_manifest" remote="pixel" />
