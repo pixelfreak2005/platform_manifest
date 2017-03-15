@@ -661,9 +661,9 @@
   <project path="frameworks/base" name="android_frameworks_base" remote="pixel" />
 
   <!--packages-->
-  <project path="packages/apps/Settings" name="Resurrection_packages_apps_Settings" revision="nougat" remote="pixel"/>
-  <project path="packages/apps/PixelDroidOTA" name="packages_apps_PixelDroidOTA" revision="nougat-PF" remote="pixel" />
-  <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" revision="cm-14.1" remote="pixel" />
+  <project path="packages/apps/Settings" name="Resurrection_packages_apps_Settings" remote="pixel"/>
+  <project path="packages/apps/PixelDroidOTA" name="packages_apps_PixelDroidOTA" remote="pixel" />
+  <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="pixel" />
 
   <!-- vendor-->
   <project path="vendor/cm" name="android_vendor_resurrection" remote="pixel" />
